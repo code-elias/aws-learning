@@ -1,3 +1,0 @@
-Subject: US-East-1 Test
-
-Helloaws ses set-active-receipt-rule-set --rule-set-name email-forwarder-rules --region us-east-1! THis is a test email

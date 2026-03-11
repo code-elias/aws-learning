@@ -1,0 +1,20 @@
+{
+    "Name": "RouteSupport",
+    "Enabled": true,
+    "Recipients": ["support@<DOMAIN>"],
+    "Actions": [
+      {
+        "S3Action": {
+          "BucketName": "<BUCKET_NAME>",
+          "ObjectKeyPrefix": "inbound/<DOMAIN>/support/"
+        }
+      },
+      {
+        "LambdaAction": {   
+          "FunctionArn": "arn:aws:lambda:<REGION>:<AWS_ACCOUNT_ID>:function:<FUNCTION_NAME>",
+          "InvocationType": "Event"
+        }
+      }
+    ]
+  }
+  

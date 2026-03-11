@@ -1,0 +1,20 @@
+{
+    "Name": "RouteInfo",
+    "Enabled": true,
+    "Recipients": ["info@<DOMAIN>"],
+    "Actions": [
+      {
+        "S3Action": {
+          "BucketName": "<BUCKET_NAME>",
+          "ObjectKeyPrefix": "inbound/<DOMAIN>/info/"
+        }
+      },
+      {
+        "LambdaAction": {
+          "FunctionArn": "arn:aws:lambda:<REGION>:<AWS_ACCOUNT_ID>:function:<FUNCTION_NAME>",
+          "InvocationType": "Event"
+        }
+      }
+    ]
+  }
+  

@@ -8,13 +8,12 @@
                 "Service": "ses.amazonaws.com"
             },
             "Action": "s3:PutObject",
-            "Resource": "arn:aws:s3:::recovryzone-email-server/*",
+            "Resource": "arn:aws:s3:::<BUCKET_NAME>/*",
             "Condition": {
                 "StringEquals": {
-                    "aws:SourceAccount": "755118747882"
+                    "aws:SourceAccount": "<AWS_ACCOUNT_ID>"
                 }
             }
         }
     ]
 }
-
